@@ -10,7 +10,7 @@ const Banner = () => {
       <h2 className="md:text-5xl text-4xl font-bold md:leading-snug leading-snug">
       Explore the Exquisite Enjoyment of  <span className="text-orange">Food.</span></h2>
       <p className="text-xl text-[#4A4A4A]">
-      Discover a world where every plate tells a tale of culinary expertise and dedicated artistry. k
+      Discover a world where every plate tells a tale of culinary expertise and dedicated artistry. 
       </p>
       <button className="btn bg-orange px-8 py-3 font-semibold text-white rounded-full">Order Now</button>
      </div>
