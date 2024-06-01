@@ -2,14 +2,14 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="section-container bg-gradient-to-r from-slate-100 to-slate-100">
+    <div className="section-container bg-gradient-to-r from-stone-100 to-sky-50">
       <div className="py-14 flex flex-col md:flex-row-reverse justify-between items-center gap-3">
         
       <div className="md:w-1/2">
       <img src="/images/Home/banner.png" className="ml-20" alt="" />
 
-      <div className="flex flex-col md:flex-row items-center ml-2 justify-around -mt-14 gap-4" >
-        <div className="flex bg-white py-2 px-3 rounded-2xl items-center gap-3 shadow-md w-64 ml-5">
+      <div className="flex flex-col md:flex-row items-center  justify-around -mt-14 gap-3" >
+        <div className="flex bg-white py-2 px-3 rounded-2xl items-center gap-2 shadow-md w-64 ml-4">
           <img
             src="/images/Home/b-food1.png"
             className="rounded-2xl"
@@ -48,7 +48,7 @@ const Banner = () => {
             <p className="text-red">₹180</p>
           </div>
         </div>
-        <div className="sm:flex hidden bg-white py-2 px-3 rounded-2xl items-center gap-3 shadow-md w-64 ml-5">
+        <div className="sm:flex hidden bg-white py-2 px-3 rounded-2xl items-center gap-3 shadow-md w-64 ml-10">
           <img
             src="/images/Home/b-food1.png"
             className="rounded-2xl"
