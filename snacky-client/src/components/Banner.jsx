@@ -1,110 +1,113 @@
 import React from "react";
+import bannerImg from "/images/Home/banner.png";
 
 const Banner = () => {
   return (
-    <div className="section-container bg-gradient-to-r from-stone-100 to-sky-50">
-      <div className="py-14 flex flex-col md:flex-row-reverse justify-between items-center gap-3">
-        
-      <div className="md:w-1/2">
-      <img src="/images/Home/banner.png" className="ml-20" alt="" />
+    <div className="max-w-screen-2xl container mx-auto xl:px-24 bg-gradient-to-r from-0% from-[#FAFAFA] to-[#FCFCFC] to-100%">
+      <div className="py-24 flex flex-col md:flex-row-reverse items-center justify-between gap-8">
 
-      <div className="flex flex-col md:flex-row items-center  justify-around -mt-14 gap-3" >
-        <div className="flex bg-white py-2 px-3 rounded-2xl items-center gap-2 shadow-md w-64 ml-4">
-          <img
-            src="/images/Home/b-food1.png"
-            className="rounded-2xl"
-            alt=""
-          />
-          <div className="space-y-1">
-            <h5> Spicy Nodles</h5>
-            <div className="rating rating-sm">
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange"
-                checked
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-black"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-black"
-              />
+        {/* img */}
+        <div className="md:w-1/2">
+          <img src={bannerImg} className="ml-14" alt="" />
+          <div className="flex flex-col md:flex-row items-center justify-around -mt-14 gap-4">
+            <div className="bg-white px-3 py-2 rounded-2xl flex items-center gap-3 shadow-sm w-64">
+              <img src="/images/Home/b-food1.png" alt=""  className="rounded-2xl"/>
+              <div className="space-y-1">
+                <h5>Spicy noodles</h5>
+                <div className="rating rating-sm">
+              
+                <input
+                    type="radio"
+                    name="rating-6"
+                    className="mask mask-star-2 bg-orange-500"
+                    readOnly
+                  />
+                <input
+                    type="radio"
+                    name="rating-6"
+                    className="mask mask-star-2 bg-orange-500"
+                    readOnly
+                  />
+                  <input
+                    type="radio"
+                    name="rating-6"
+                    className="mask mask-star-2 bg-orange-500"
+                    checked
+                    readOnly
+                  />
+                  <input
+                    type="radio"
+                    name="rating-6"
+                    className="mask mask-star-2 bg-orange-400"
+                  />
+                  <input
+                    type="radio"
+                    name="rating-6"
+                    className="mask mask-star-2 bg-orange-400"
+                    readOnly
+                  />
+                
+                </div>
+                <p className="text-red">$18.00</p>
+              </div>
             </div>
-            <p className="text-red">₹180</p>
+            <div className="bg-white px-3 py-2 rounded-2xl md:flex items-center gap-3 shadow-sm w-64 hidden">
+              <img src="/images/Home/b-food1.png" alt=""  className="rounded-2xl"/>
+              <div className="space-y-1">
+                <h5>Spicy noodles</h5>
+                <div className="rating rating-sm">
+                <input
+                    type="radio"
+                    name="rating-6"
+                    className="mask mask-star-2 bg-orange-500"
+                    readOnly
+                  />
+                <input
+                    type="radio"
+                    name="rating-6"
+                    className="mask mask-star-2 bg-orange-500"
+                    readOnly
+                  />
+                  <input
+                    type="radio"
+                    name="rating-6"
+                    className="mask mask-star-2 bg-orange-500"
+                    checked
+                    readOnly
+                  />
+                  <input
+                    type="radio"
+                    name="rating-6"
+                    className="mask mask-star-2 bg-orange-400"
+                    readOnly
+                  />
+                  <input
+                    type="radio"
+                    name="rating-6"
+                    className="mask mask-star-2 bg-orange-400"
+                    readOnly
+                  />
+                
+                </div>
+                <p className="text-red">$18.00</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="sm:flex hidden bg-white py-2 px-3 rounded-2xl items-center gap-3 shadow-md w-64 ml-10">
-          <img
-            src="/images/Home/b-food1.png"
-            className="rounded-2xl"
-            alt=""
-          />
-          <div className="space-y-1">
-            <h5> Spicy Nodles</h5>
-            <div className="rating rating-sm">
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange"
-                checked
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-orange"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-black"
-              />
-              <input
-                type="radio"
-                name="rating-2"
-                className="mask mask-star-2 bg-black"
-              />
-            </div>
-            <p className="text-red">₹180</p>
-          </div>
-        </div>
-      </div>
-    </div>
-      {/*texts*/}
-        <div className="md:w-1/2 space-y-7 ">
-          <h2 className="md:text-5xl text-4xl font-bold md:leading-snug leading-snug">
-            Explore the Exquisite Enjoyment of{" "}
-            <span className="text-orange">Food.</span>
+
+        {/* texts */}
+        <div className="md:w-1/2 px-4 space-y-7">
+        <h2 className="md:text-5xl text-4xl font-bold md:leading-snug leading-snug">
+            Dive into Delights Of Delectable <span className="text-orange">Food</span>
           </h2>
-          <p className="text-xl text-[#4A4A4A]">
-            Discover a world where every plate tells a tale of culinary
-            expertise and dedicated artistry.
+          <p className="text-[#4A4A4A] text-xl">
+            Where Each Plate Weaves a Story of Culinary Mastery and Passionate
+            Craftsmanship
           </p>
-          <button className="btn bg-orange px-8 py-3 font-semibold text-white rounded-full">
+          <button className="bg-orange font-semibold btn text-white px-8 py-3 rounded-full">
             Order Now
           </button>
         </div>
-
-        {/* Images */}
         
       </div>
     </div>

@@ -1,49 +1,47 @@
-import React, { useEffect, useState } from "react";
-import Logo from "/logo.png";
+import React, { useContext, useEffect, useState } from "react";
+import logo from "/logo.png";
 import { FiPhoneCall } from "react-icons/fi";
 
-const Navbar = () => {
-  const [isSticky, setIsSticky] = useState(false);
 
-  //handle scroll facility
+const Navbar = () => {
+  const [isSticky, setSticky] = useState(false);
+
+ 
+
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.screenY;
+      const offset = window.scrollY;
       if (offset > 0) {
-        setIsSticky(true);
+        setSticky(true);
       } else {
-        setIsSticky(false);
+        setSticky(false);
       }
     };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.addEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
-
   }, []);
 
   const navItems = (
     <>
       <li>
-        <a href="/">Home</a>
+        <a className="text-orange">Home</a>
       </li>
       <li tabIndex={0}>
         <details>
           <summary>Menu</summary>
           <ul className="p-2">
             <li>
-              <a>All</a>
+              <a href="/menu">All</a>
             </li>
             <li>
-              <a>Gujrati</a>
+              <a>Salad</a>
             </li>
             <li>
-              <a>Kathiyawadi</a>
-            </li>
-            <li>
-              <a>Punjabi</a>
+              <a>Pizza</a>
             </li>
           </ul>
         </details>
@@ -53,7 +51,7 @@ const Navbar = () => {
           <summary>Services</summary>
           <ul className="p-2">
             <li>
-              <a>Online Ordering</a>
+              <a>Online Order</a>
             </li>
             <li>
               <a>Table Booking</a>
@@ -69,13 +67,20 @@ const Navbar = () => {
       </li>
     </>
   );
-
   return (
-    <header className="max-w-screen-2xl container mx-auto fixed top-0 left-0 right-0">
-      <div className="navbar xl:px-24">
+    <header
+      className={`max-w-screen-2xl container mx-auto fixed top-0 left-0 right-0 transition-all duration-300 ease-in-out`}
+    >
+      <div
+        className={`navbar xl:px-24 ${
+          isSticky
+            ? "shadow-md bg-base-100 transition-all duration-300 ease-in-out"
+            : ""
+        }`}
+      >
         <div className="navbar-start">
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div className="dropdown justify-between">
+            <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -90,23 +95,22 @@ const Navbar = () => {
                   d="M4 6h16M4 12h8m-8 6h16"
                 />
               </svg>
-            </div>
+            </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-64 space-y-3"
             >
               {navItems}
             </ul>
           </div>
           <a href="/">
-            <img src={Logo} alt="" />
+            <img src={logo} alt="" />
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navItems}</ul>
         </div>
-        <div className="navbar-end">
-          {/* Search Bar*/}
+        <div className="navbar-end ">
           <button className="btn btn-ghost btn-circle hidden lg:flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -123,14 +127,11 @@ const Navbar = () => {
               />
             </svg>
           </button>
-
-          {/*Cart */}
-          <div
+          <label
             tabIndex={0}
-            role="button"
-            className="btn btn-ghost btn-circle mr-4 lg:flex hidden items-center justify-center"
+            className="btn btn-ghost btn-circle hidden lg:flex items-center justify-center mr-3"
           >
-            <div className="indicator mr-3">
+            <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -145,16 +146,19 @@ const Navbar = () => {
                   d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                 />
               </svg>
-              <span className="badge bg-green text-white badge-sm indicator-item">
-                8
-              </span>
+              <span className="badge- badge-sm indicator-item text-white rounded-full bg-green">8</span>
             </div>
-          </div>
+          </label>
 
-          <a className="btn bg-green rounded-full px-6 text-white flex items-center gap-2">
-            <FiPhoneCall />
-            Contact
-          </a>
+         <button
+      
+          className="btn flex items-center gap-2 rounded-full px-6 bg-green text-white"
+        >
+          < FiPhoneCall /> Contact
+        </button>
+         
+          
+         
         </div>
       </div>
     </header>
