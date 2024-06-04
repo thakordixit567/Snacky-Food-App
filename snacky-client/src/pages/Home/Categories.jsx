@@ -22,10 +22,10 @@ const Categories = () => {
            {
              categoryItems.map((item, i) => (
                <div key={i} 
-               className='shadow-lg rounded-md bg-white py-6 px-5 w-72 mx-auto text-center cursor-pointer
+               className='shadow-lg rounded-md bg-gradient-to-r from-slate-200 to-gray-200 py-6 px-5 w-72 mx-auto text-center cursor-pointer
                hover:-translate-y-4 duration-300 transition-all'>
                   <div className='flex w-full mx-auto items-center justify-center'>
-                    <img src={item.image} alt="" className='bg-[#C1F1C6] p-5 rounded-full w-28 h-28' />
+                    <img src={item.image} alt="" className='bg-gradient-to-r from-teal-400 to-yellow-200 p-5 rounded-full w-28 h-28' />
                   </div>
                   <div className='mt-5 space-y-1'>
                     <h5>{item.title}</h5>
