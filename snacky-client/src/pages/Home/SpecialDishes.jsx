@@ -4,6 +4,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Cards from "../../components/Cards";
 
+const simpleNextArrow = (props) => {
+  
+}
+
 const SpecialDishes = () => {
   const [recipes, setRecipes] = useState([]);
   const slider = React.useRef(null);
