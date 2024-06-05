@@ -3,10 +3,34 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import Cards from "../../components/Cards";
+import {} from 'react-icons/fa6'
+import { FaAngleLeft } from "react-icons/fa";
 
 const simpleNextArrow = (props) => {
-  
-}
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red" }}
+      onClick={onClick}
+    >
+      NEXT
+    </div>
+  );
+};
+
+const simplePrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "orange" }}
+      onClick={onClick}
+    >
+      BACK
+    </div>
+  );
+};
 
 const SpecialDishes = () => {
   const [recipes, setRecipes] = useState([]);
@@ -55,6 +79,9 @@ const SpecialDishes = () => {
         },
       },
     ],
+
+    nextArrow: <simpleNextArrow/>,
+    prevArrow: <simplePrevArrow/>
   };
   return (
     <div className="section-container my-20">
@@ -62,13 +89,19 @@ const SpecialDishes = () => {
         <p className="subtitle">Special Dishes</p>
         <h2 className="title md:w-[520px]">Highlighted Menu Items.</h2>
       </div>
+       
 
-      <Slider {...settings}>
-        {
-          recipes.map((item,i) => (
-            <Cards key={i} item={item} />
-          ))
-        }
+      <div>
+         <button onClick={() => slider?.current?.slickPrev()} className="btn p-2 rounded-full ml-5">
+           <FaAngleLeft/>
+         </button>
+         <button onClick={() => slider?.current?.slickNext()}>Next</button>
+      </div>
+       
+      <Slider ref={slider} {...settings}>
+        {recipes.map((item, i) => (
+          <Cards key={i} item={item} />
+        ))}
       </Slider>
     </div>
   );
