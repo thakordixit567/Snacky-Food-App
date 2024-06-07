@@ -20,16 +20,54 @@ const Menu = () => {
         console.log("Error fatching from data", error);
       }
     };
-    
+
     // call the function
     fetchData();
-
   }, []);
 
   // filtering on data based on category
   const filterItems = (category) => {
-    const filtred = category === "all" ? menu : menu.filter((item) =>  item.category === category);
-  }
+    const filtred =
+      category === "all"
+        ? menu
+        : menu.filter((item) => item.category === category);
+
+    setFilteredItems(filtred);
+    selectedCategory(category);
+  };
+
+  //Show all data
+  const showAll = () => {
+    setFilteredItems(menu);
+    setSelectedCategory("all");
+  };
+
+  // Filter section sorting section
+  const handleSortChange = (option) => {
+    setSortOptions(option);
+
+    let sortedItems = [...filterItems];
+
+    //Now build logic
+
+    switch (option) {
+      case "A-Z":
+        sortedItems.sort((a, b) => a.name.localCompare(b.name));
+        break;
+      case "Z-A":
+        sortedItems.sort((a, b) => b.name.localCompare(a.name));
+      case "low-to-high":
+        sortedItems.sort((a, b) => a.price - b.price);
+      case "high-to-low":
+        sortedItems.sort((a, b) => b.price - a.price);
+        break;
+      default:
+        // code block
+        break;
+    }
+
+    setFilteredItems(sortedItems);
+  };
 
   return (
     <div>
