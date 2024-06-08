@@ -9,7 +9,7 @@ const Cards = ({ item }) => {
     setIsHeartfill(!isHeartfill);
   };
   return (
-    <div className="card w-96 bg-gradient-to-r from-slate-200 to-gray-200 shadow-xl relative">
+    <div className="card bg-gradient-to-r from-slate-200 to-gray-200 shadow-xl relative mr-5 md:my-5">
       <div 
       className={`rating gap-1 absolute right-2 top-2 p-4 heartStar bg-green ${isHeartfill ?  
         "text-rose-500" : "text-white"}`}
