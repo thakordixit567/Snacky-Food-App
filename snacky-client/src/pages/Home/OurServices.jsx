@@ -15,7 +15,7 @@ const OurServices = () => {
         <div className="md:w-1/2">
           <div className="text-left md:w-4/5">
             <p className="subtitle">Our Story & Services</p>
-            <h2 className="title">
+            <h2 className="title hover:text-orange">
               Discover our culinary adventure and exceptional services.
             </h2>
             <p className="my-5 text-secondary leading-[30px]">

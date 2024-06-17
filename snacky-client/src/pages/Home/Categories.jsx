@@ -12,7 +12,7 @@ const Categories = () => {
     <div className='section-container py-16'>
       <div className='text-center'>
          <p className='subtitle'>Customer Favorites</p>
-           <h2 className='title'>
+           <h2 className='title hover:text-orange'>
            Popular Categories
            </h2>
          </div>
