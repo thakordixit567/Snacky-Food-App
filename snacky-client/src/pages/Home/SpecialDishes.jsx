@@ -87,7 +87,7 @@ const SpecialDishes = () => {
     <div className="section-container my-20 relative">
       <div className="text-left">
         <p className="subtitle">Special Dishes</p>
-        <h2 className="title md:w-[520px] hover:text-orange">Highlighted Menu Items.</h2>
+        <h2 className="title md:w-[520px]">Highlighted Menu Items.</h2>
       </div>
        
 

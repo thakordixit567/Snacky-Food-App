@@ -10,7 +10,7 @@ const Banner = () => {
         <div className="md:w-1/2">
           <img src={bannerImg} className="ml-14" alt="" />
           <div className="flex flex-col md:flex-row items-center justify-around -mt-14 gap-4">
-            <div className="bg-white border-y-8 border-x-8 px-3 py-2 rounded-2xl flex items-center gap-3 shadow-sm w-64">
+            <div className="bg-white px-3 py-2 rounded-2xl flex items-center gap-3 shadow-sm w-64">
               <img src="/images/Home/b-food1.png" alt=""  className="rounded-2xl"/>
               <div className="space-y-1">
                 <h5>Spicy noodles</h5>
@@ -51,7 +51,7 @@ const Banner = () => {
                 <p className="text-red">$18.00</p>
               </div>
             </div>
-            <div className="bg-white border-y-8 border-x-8 px-3 py-2 rounded-2xl md:flex items-center gap-3 shadow-sm w-64 hidden">
+            <div className="bg-white px-3 py-2 rounded-2xl md:flex items-center gap-3 shadow-sm w-64 hidden">
               <img src="/images/Home/b-food1.png" alt=""  className="rounded-2xl"/>
               <div className="space-y-1">
                 <h5>Spicy noodles</h5>

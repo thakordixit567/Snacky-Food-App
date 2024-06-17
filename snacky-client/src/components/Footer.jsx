@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="footer bg-gradient-to-r from-yellow-300 to-yellow-300 xl:px-24 py-10 px-4 text-base-content">
+      <footer className="footer xl:px-24 py-10 px-4 text-base-content">
         <aside>
           <img src="/logo.png" alt="" />
           <p className="my-3 md:w-40">
@@ -26,11 +26,11 @@ const Footer = () => {
         </nav>
       </footer>
         <hr />
-      <footer className="footer bg-gradient-to-r from-slate-800 to-slate-800 items-center xl:px-24 px-4 py-4 mt-2">
-        <aside className="items-center grid-flow-col text-white">
+      <footer className="footer items-center xl:px-24 px-4 py-4 mt-2">
+        <aside className="items-center grid-flow-col">
           <p>Copyright © 2023 - All right reserved</p>
         </aside>
-        <nav className="grid-flow-col text-white gap-4 md:place-self-center md:justify-self-end">
+        <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
           <a>
             <svg
               xmlns="http://www.w3.org/2000/svg"
