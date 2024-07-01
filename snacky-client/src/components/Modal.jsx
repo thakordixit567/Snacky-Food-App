@@ -27,7 +27,7 @@ const Modal = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <input type='submit' value='Login' className="btn btn-primary" />
+                <input type='submit' value='Login' className="btn bg-orange" />
               </div>
             </form>
               </div>
